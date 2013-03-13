@@ -1,0 +1,6 @@
+var fs = require('fs');
+
+exports.log_file = "/tmp/mplayerweb.log";
+exports.port = 7101;
+exports.mplayer_path = "mplayer";
+exports.media_root = "/mnt/mediaserver";

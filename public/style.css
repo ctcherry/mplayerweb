@@ -1,0 +1,164 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fafafa;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.3em;
+  min-height: 100%;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.season {
+  margin-bottom: .8em;
+}
+
+.episodes a, .episodes span {
+  display: inline-block;
+  margin: 0 .5em .5em 0;
+}
+
+.episodes span {
+  color: #888;
+}
+
+.movie_list li {
+  display: block;
+  margin-bottom: .5em;
+}
+
+#page {
+  position: relative;
+}
+
+nav.main {
+  background: #000;
+  height: 32px;
+}
+
+nav.main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: .75em;
+}
+
+nav.main ul li {
+  display: inline;
+}
+
+nav.main ul li a {
+  display: inline-block;
+  padding: .5em .5em;
+  color: #ccc;
+}
+
+nav.main ul li a:hover {
+  color: #fff;
+}
+
+nav.main ul li a.stop {
+  color: #f00;
+}
+
+nav.main ul.right {
+  float: right;
+}
+
+nav.main ul.left {
+  float: left;
+}
+
+nav.side {
+  float: left;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background: #ccc;
+  padding: .5em;
+  padding-right: 0;
+  width: 250px;
+  min-height: 100%;
+}
+
+#status {
+  color: #00f;
+  padding: .5em;
+}
+
+#content {
+  width: 550px;
+  min-height: 100%;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: .5em;
+  margin-left: 250px;
+}
+
+#content ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav.side ul {
+  margin: 0;
+  margin-bottom: .5em;
+  padding: 0;
+  list-style: none;
+}
+
+nav.side ul li.current {
+  background: #fafafa;
+  color: #000;
+  box-shadow: 0 4px 2px -2px #bbb;
+}
+
+nav.side ul li a {
+  display: block;
+  padding: .5em .75em;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+nav.side ul li a,
+nav.side ul li a:link,
+nav.side ul li a:visited {
+  color: #555;
+}
+
+nav.side ul li a:hover {
+  color: #000;
+  background: #dadada;
+}
+
+nav.side ul li.current a {
+  background: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+iframe {
+  display: none;
+}
