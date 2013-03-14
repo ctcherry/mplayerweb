@@ -7,7 +7,7 @@ The background mplayer instance is run in slave mode with -idle and a few other 
 
 Usage
 -----
-    git clone http://github.com/ctcherry/mplayerweb
+    git clone https://github.com/ctcherry/mplayerweb
     cd mplayerweb
     cp config.js.sample config.js
     vim config.js
