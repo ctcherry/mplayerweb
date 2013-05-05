@@ -175,6 +175,16 @@ var s = http.createServer(function(request, resp){
       return;
     }
 
+    if (req_url.pathname == "/cmd") {
+      if (req_url.query !== "" && req_url.query != "/") {
+        resp.writeHead(200, {'content-type':'text/plain'});
+        f = decodeURIComponent(req_url.query.replace(/\+/g, ' '));
+        mplayer_instance.send(f);
+        resp.end(f);
+      }
+      return;
+    }
+
     if (req_url.pathname == "/") {
       resp.writeHead(302, {'location':'/tv'});
       resp.end();
