@@ -9,7 +9,6 @@ function set_status(now) {
 		url: url,
 		dataType: 'json',
 		success: function(data){
-			console.log(data);
 			if (data.state == "idle") {
 				$('#status').html("Idle");
 			}
@@ -28,7 +27,7 @@ function set_status(now) {
 		error: function() {
 			// On error wait 10sec before next request
 			$('#status').html("Status Request Error");
-			setTimeout(function() {set_status(false)}, 10000);
+			setTimeout(function() {set_status(false);}, 10000);
 		}
 	});
 }

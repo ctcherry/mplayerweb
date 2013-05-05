@@ -58,7 +58,7 @@ function r_status(resp, send_now) {
 }
 
 var s = http.createServer(function(request, resp){
-    var req_url = url.parse(request.url)
+    var req_url = url.parse(request.url);
     log('http', 'REQUEST: '+request.url);
 
     if (req_url.pathname == "/style.css") {
@@ -74,7 +74,7 @@ var s = http.createServer(function(request, resp){
     }
 
     if (req_url.pathname == "/play") {
-      if (req_url.query != "" && req_url.query != "/") {
+      if (req_url.query !== "" && req_url.query != "/") {
         resp.writeHead(200, {'content-type':'text/plain'});
         f = decodeURIComponent(req_url.query.replace(/\+/g, ' '));
         mplayer_instance.play(f);
@@ -84,7 +84,7 @@ var s = http.createServer(function(request, resp){
     }
 
     if (req_url.pathname == "/play/list") {
-      if (req_url.query != "" && req_url.query != "/") {
+      if (req_url.query !== "" && req_url.query != "/") {
         resp.writeHead(200, {'content-type':'text/plain'});
         f = decodeURIComponent(req_url.query.replace(/\+/g, ' '));
         mplayer_instance.play_list(f);
@@ -102,7 +102,7 @@ var s = http.createServer(function(request, resp){
 
     if (req_url.pathname == "/rescan") {
       media.scan();
-      if (typeof(request.headers.referer) != 'undefined' && request.headers.referer != '') {
+      if (typeof(request.headers.referer) != 'undefined' && request.headers.referer !== '') {
         resp.writeHead(302, {'location': request.headers.referer});
         resp.end();
       } else {
@@ -145,8 +145,8 @@ var s = http.createServer(function(request, resp){
       return;
     }
 
-    if (req_url.pathname.indexOf("/tv/") == 0) {
-      name = decodeURIComponent(req_url.pathname.replace(/\+/g, ' '));
+    if (req_url.pathname.indexOf("/tv/") === 0) {
+      var name = decodeURIComponent(req_url.pathname.replace(/\+/g, ' '));
       name = name.substring(4);
       show = media.tvShow(name);
       if (typeof(show) == "undefined") {
