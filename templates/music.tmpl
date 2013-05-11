@@ -30,7 +30,7 @@
 
 	<ul class="movie_list">
 	<% _.each(difm_stations, function(st) { %>
-		<li><a target="hframe" href="/play/list?<%= st[1] %>"><%= st[0] %></a></li>
+		<li><a target="hframe" href="/play/list?<%= st.playlist %>"><%= st.name %></a></li>
 	<% }); %>
 	</ul>
 
